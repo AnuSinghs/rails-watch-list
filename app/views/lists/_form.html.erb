@@ -1,0 +1,12 @@
+<div class="container">
+  <%= simple_form_for(@list) do |f| %>
+    <div class="form-title">
+      <%= f.label :name %><br>
+      <%= f.text_field :name %><br><br>
+    </div>
+    <div class="form-button">
+      <%= f.submit %>
+  </div>
+  <% end %>
+</div>
+

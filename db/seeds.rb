@@ -5,3 +5,46 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
+#   Character.create(name: 'Luke', movie: movies.first)
+puts 'destroy old data'
+
+Bookmark.destroy_all
+Movie.destroy_all
+List.destroy_all
+
+require 'faker'
+# require 'pry-byebug'
+
+50.times do
+  movie = Movie.new(
+    title: Faker::Movie.title,
+    overview: Faker::Movie.quote,
+    poster_url: Faker::Internet.url,
+    rating: (5..10).to_a.sample
+  )
+  if movie.valid?
+    movie.save!
+  end
+end
+
+10.times do
+  list = List.new(
+    name: Faker::Music.genre
+  )
+  if list.valid?
+    list.save!
+  end
+
+  (1..3).to_a.sample.times do
+    bookmark = Bookmark.new(
+      comment: Faker::TvShows::Friends.quote,
+      list: List.last,
+      movie: Movie.all.sample
+    )
+    if bookmark.valid?
+      bookmark.save!
+    end
+  end
+end

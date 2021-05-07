@@ -1,0 +1,12 @@
+<div class="container">
+    <article>
+      <div class="list">
+      <% @lists.each do |list| %>
+        <div class="content">
+          <h4><%= link_to list.name, list_path(list) %></h4>
+        </div>
+      <% end %>
+    </div>
+  </article>
+  </div>
+

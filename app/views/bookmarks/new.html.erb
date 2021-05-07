@@ -1,12 +1,16 @@
 <div class="container">
+  <div class ="form">
   <%= simple_form_for([@list, @bookmark ]) do |f| %>
     <div class="form-title">
+      <div class="movie">
       <%= f.association :movie %>
+      </div>
       <%= f.label :comment %><br>
       <%= f.text_field :comment%><br><br>
     </div>
     <div class="form-button">
       <%= f.submit %>
+  </div>
   </div>
   <% end %>
 </div>

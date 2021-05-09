@@ -1,14 +1,19 @@
 <div class="container">
   <div class ="form">
-  <%= simple_form_for(@list) do |f| %>
-    <div class="form-title">
-      <%= f.label :name %><br>
-      <%= f.text_field :name %><br><br>
-    </div>
-    <div class="form-button">
-      <%= f.submit %>
+    <div class="form-total">
+      <%= simple_form_for(@list) do |f| %>
+      <div class="form-title">
+        <%= f.label :name%><br>
+        <%= f.text_field :name%><br><br>
+      </div>
+      <div class="form-picture">
+      <%= f.input :photo , as: :file %>
+      </div>
+      <div class="button btn-primary">
+        <%= f.submit "Add", class: "btn btn-primary"%>
+      </div>
+        <% end %>
+      </div>
   </div>
-</div>
-  <% end %>
 </div>
 

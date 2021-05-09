@@ -3,10 +3,13 @@
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  padding-right: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
 }
 
 .card-trip > img {
-  height: 300px;
+  height: 350px;
   width: 100%;
   object-fit: cover;
 }
@@ -15,30 +18,61 @@
   font-weight: bold;
   padding: 10px;
   margin: 0;
+  font-size: 20px;
 }
 
 .card-trip p {
-  font-size: 20px;
-  opacity: .7;
-  padding: 10px;
-  margin: 0;
+  font-size: 15px;
 }
 
+.card-infos p {
+  padding-top: 15px;
+  padding-left: 15px;
+}
 
-.card-trip .card-trip-infos {
-   font-size: 30px;
-  padding: 16px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  position: relative;
+.card-trip-infos{
   background-color: black;
   color: white;
+  display: block;
+  padding: 10px;
 }
 
-.card-trip-infos .card-trip-user {
-  position: absolute;
-  right: 16px;
-  top: -10px;
-  width: 40px;
+.options {
+  display: flex;
+  justify-content: space-start;
 }
+
+.comment a {
+  font-size: 10px;
+  background-color: black;
+  opacity: .7px;
+  border-radius: 5px;
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+}
+
+.list-delete a, .lis-edit a {
+  font-size: 10px;
+  background-color: white;
+  opacity: .7px;
+  border-radius: 5px;
+  color: black;
+  padding: 10px;
+  text-decoration: none;
+  margin: 10px;
+}
+
+.card-trip-comment {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  padding-right: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+}
+
+.comment {
+  margin-left: 10px;
+}
+

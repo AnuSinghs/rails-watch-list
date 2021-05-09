@@ -15,7 +15,9 @@ Movie.destroy_all
 List.destroy_all
 
 require 'faker'
+require "open-uri"
 # require 'pry-byebug'
+
 
 50.times do
   movie = Movie.new(
@@ -34,6 +36,8 @@ end
     name: Faker::Music.genre
   )
   if list.valid?
+    file = URI.open('https://source.unsplash.com/1600x900/?movies')
+    list.photo.attach(io: file, filename: 'images.png', content_type: 'image/png')
     list.save!
   end
 

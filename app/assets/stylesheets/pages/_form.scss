@@ -3,13 +3,9 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  padding: 40px;
-
-  & > .movie {
-    flex: 1 1 10ch;
-    margin: .5rem;
-  }
+  align-items: left;
+  padding: 20px;
+  margin: 10px;
 }
 
 .form-title {
@@ -19,8 +15,18 @@
   padding: .75rem 1rem;
   }
 
-.form[type="submit"] {
-    background: hotpink;
-    color: white;
-    box-shadow: 0 .75rem .5rem -.5rem white(0 50% 80%);
-  }
+.form-total {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  background: white
+
+}
+
+.form-picture {
+  margin: 10px;
+}
+
+.form-button {
+  margin: 10px;
+}
